@@ -27,6 +27,7 @@ p {
 }
 ul {
   padding: 0;
+  margin: 0;
 }
 img {
   display: block;
@@ -60,25 +61,20 @@ button {
   overflow: hidden;
 }
 .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 428px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
 }
+
+/* --------------------HEADER-------------------- */
+
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.company-item-icons-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 112px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
-}
+
 .logo-link {
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -148,8 +144,11 @@ button {
 .addres-link:focus {
   color: var(--ocean);
 }
+
+/* --------------SOLUTION-------------- */
+
 .section-solution {
-  padding: 188px 0;
+  padding: 112px 0;
   margin: auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -159,18 +158,18 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
+  max-width: 428px;
 }
 .solution-title {
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  max-width: 496px;
+  max-width: 320px;
   margin: 0 auto;
   color: #ffffff;
-  padding-bottom: 48px;
+  margin-bottom: 72px;
 }
 .solution-btn {
   font-family: "Roboto", sans-serif;
@@ -192,21 +191,45 @@ button {
 .solution-btn:focus {
   background-color: var(--ocean);
 }
+
+/* ---------------COMPANY----------------- */
+
 .section-company {
   padding: 120px 0;
 }
-.company-list,
+
+.company-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 64px;
+}
+.company-list-item {
+  width: 396px;
+  /* width: calc((100% - 48px) / 3); */
+}
 .team-list,
 .work-list {
   display: flex;
   gap: 24px;
 }
+
 .section-work {
   padding-bottom: 120px;
 }
 .section-team {
   background-color: var(--cloud);
 }
+
+.company-item-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
 .company-title,
 .team-name,
 .project-title {
@@ -217,11 +240,21 @@ button {
   color: var(--navy-blue);
 }
 .company-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
   margin-bottom: 8px;
 }
-.company-list-item {
-  width: calc((100% - 48px) / 3);
+
+.company-text {
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
 }
+
 .team-title,
 .work-title {
   font-size: 36px;
@@ -238,8 +271,7 @@ button {
 .team-name-container {
   padding: 32px 0;
 }
-.team-title,
-.company-text {
+.team-title {
   letter-spacing: 0.02em;
 }
 .team-list-item {
