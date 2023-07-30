@@ -65,6 +65,10 @@ button {
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
+  outline: 2px solid red;
+}
+section {
+  outline: 2px dashed green;
 }
 
 /* --------------------HEADER-------------------- */
@@ -158,7 +162,6 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 428px;
 }
 .solution-title {
   font-size: 36px;
@@ -172,8 +175,6 @@ button {
   margin-bottom: 72px;
 }
 .solution-btn {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
   background-color: var(--iris);
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -195,29 +196,18 @@ button {
 /* ---------------COMPANY----------------- */
 
 .section-company {
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 0;
 }
 
 .company-list {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 64px;
+  row-gap: 72px;
 }
 .company-list-item {
   width: 396px;
   /* width: calc((100% - 48px) / 3); */
-}
-.team-list,
-.work-list {
-  display: flex;
-  gap: 24px;
-}
-
-.section-work {
-  padding-bottom: 120px;
-}
-.section-team {
-  background-color: var(--cloud);
 }
 
 .company-item-icons-container {
@@ -228,9 +218,10 @@ button {
   background-color: #f4f4fd;
   border-radius: 4px;
   margin-bottom: 8px;
+  display: none;
 }
 
-.company-title,
+/* .company-title,
 .team-name,
 .project-title {
   font-weight: 500;
@@ -238,7 +229,8 @@ button {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
-}
+} */
+
 .company-title {
   font-weight: 700;
   font-size: 36px;
@@ -255,7 +247,12 @@ button {
   letter-spacing: 0.02em;
 }
 
-.team-title,
+/* ---------------WORK----------------- */
+
+.section-work {
+  display: none;
+  padding-bottom: 120px;
+}
 .work-title {
   font-size: 36px;
   font-weight: 700;
@@ -265,13 +262,34 @@ button {
   text-transform: capitalize;
   margin-bottom: 72px;
 }
+.work-list {
+  display: flex;
+  gap: 24px;
+}
+
+/* ---------------TEAM----------------- */
+
 .section-team {
-  padding: 120px 0;
+  padding: 96px 0;
+  background-color: var(--cloud);
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
 }
 .team-name-container {
   padding: 32px 0;
 }
 .team-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  color: var(--navy-blue);
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 72px;
   letter-spacing: 0.02em;
 }
 .team-list-item {
@@ -281,6 +299,11 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
   margin-bottom: 8px;
   text-align: center;
 }
@@ -314,6 +337,52 @@ button {
 .social-item-link:focus {
   background-color: var(--ocean);
 }
+
+/* ---------------COSTOMERS----------------- */
+
+.costomers-section {
+  padding: 96px 0;
+}
+.costomers-tetle {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  color: #2e2f42;
+  letter-spacing: 0.02em;
+  margin-bottom: 72px;
+}
+.costomers-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 72px 16px;
+}
+.costomers-list-item {
+  width: 190px;
+  height: 88px;
+}
+.costomers-item-link {
+  display: flex;
+  justify-content: center;
+  color: var(--customers-color);
+  align-items: center;
+  fill: #8e8f99;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.costomers-item-link:hover,
+.costomers-item-link:focus {
+  color: #404bbf;
+  border-color: var(--ocean);
+  fill: var(--ocean);
+}
+
 /* portfolio */
 
 .project-section {
@@ -403,49 +472,7 @@ button {
   color: var(--slate);
   letter-spacing: 0.02em;
 }
-.costomers-section {
-  padding: 120px 0;
-}
-.costomers-tetle {
-  text-align: center;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.11;
-  color: #2e2f42;
-  letter-spacing: 0.72px;
-  text-transform: capitalize;
-  margin-bottom: 72px;
-}
-.costomers-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-.costomers-list-item {
-  width: calc((100% - 120px) / 6);
-  height: 88px;
-}
-.costomers-item-link {
-  display: flex;
-  justify-content: center;
-  color: var(--customers-color);
-  align-items: center;
-  fill: #8e8f99;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.costomers-item-link:hover,
-.costomers-item-link:focus {
-  color: #404bbf;
-  border-color: var(--ocean);
-  fill: var(--ocean);
-}
+
 .costomers-svg {
   fill: currentColor;
 }
@@ -454,20 +481,24 @@ button {
   background-color: var(--navy-blue);
 }
 .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 96px 0;
+  text-align: center;
 }
 .footer-container {
   display: flex;
-  align-items: baseline;
+  /* align-items: baseline; */
+  flex-direction: column;
 }
 .footer-info {
-  margin-right: 120px;
+  /* margin-right: 120px; */
+  margin-bottom: 72px;
 }
 .footer-text {
   color: var(--cloud);
   letter-spacing: 0.02em;
-  max-width: 264px;
+  max-width: 268px;
+  margin: 0 auto;
+  text-align: left;
 }
 .footer-logo-link {
   display: inline-block;
@@ -478,12 +509,14 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: var(--iris);
+  margin-bottom: 18px;
 }
 .footer-logo-decoration {
   color: var(--cloud);
 }
 
 .footer-social-container {
+  margin-bottom: 72px;
 }
 .footer-social-list {
   display: flex;
@@ -518,7 +551,7 @@ button {
   margin-bottom: 16px;
 }
 .footer-form-container {
-  margin-left: 80px;
+  /* margin-left: 80px; */
 }
 .footer-form-title {
   color: #fff;
@@ -529,10 +562,12 @@ button {
 }
 .footer-form {
   display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 .subscribe-form-input {
-  width: 264px;
+  /* width: 264px; */
+  width: 100%;
   height: 40px;
   border: 1px solid #ffffff;
   background-color: transparent;
@@ -561,6 +596,7 @@ button {
   background-color: #4d5ae5;
   margin-left: auto;
   margin-right: auto;
+  padding: 8px 24px;
   border: none;
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
