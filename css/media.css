@@ -1,12 +1,27 @@
-@media screen and (min-width: 428px) {
+@media screen and (max-width: 428px) {
   /* .costomers-list-item {
     width: 190px;
   } */
+  /* .menu {
+    display: none;
+  } */
+}
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .address-list {
+    flex-direction: column;
+    gap: 12px;
   }
   .solution-title {
     font-size: 56px;
@@ -61,6 +76,10 @@
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
   }
   .section-solution {
     padding: 188px 0;
