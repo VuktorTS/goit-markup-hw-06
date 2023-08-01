@@ -126,7 +126,7 @@ section {
   background-color: #404bbf;
   border-radius: 2px;
   width: 100%;
-  top: 59px;
+  top: 65px;
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -276,15 +276,25 @@ section {
 
 .section-solution {
   padding: 112px 0;
-  margin: auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/office-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-solution {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/office-mob@2x.jpg);
+  }
 }
 .solution-title {
   font-size: 36px;
